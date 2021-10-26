@@ -84,7 +84,18 @@ class operacio{
         }
     }
     void eliminarPila(){
-        
+        if(fin==null){
+            System.out.println("Lista Vacia!!");
+        }else{
+            if(fin.ant==null){
+                inicio=fin=null;
+                System.out.println("Se eliminio el ultimo nodo!!");
+            }else{
+                fin=fin.ant;
+                fin.sgte=null;
+                System.out.println("Se elimino un nodo de la lista!!");
+            }
+        }
     }
 }
 
@@ -101,7 +112,11 @@ public class eje04 {
 //        op.agregarCola("Limon", rd.nextFloat());
 //        op.agregarCola("Uva", rd.nextFloat());
         op.mostrarInicioFin();
-        op.eliminarCola();
+        //op.eliminarCola();
+        op.eliminarPila();
+        op.eliminarPila();
+        op.eliminarPila();
+        op.eliminarPila();
         op.mostrarInicioFin();
     }
 }
